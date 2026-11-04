@@ -22,4 +22,20 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
       - run: pnpm lint
-      # TODO (Week 1): eval gate — fail PR when pass rate drops
+  eval-gate:
+    # Skipped until the first eval set exists; then fails PRs whose pass rate drops vs. the
+    # baseline committed on main. Convention: evalsets/<name>.jsonl, <name>.baseline.json,
+    # and a target function at evals_targets/<name>.py:suggest.
+    if: hashFiles('evalsets/resumemaster.jsonl') != ''
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: codeksnet/evals@main
+        with:
+          evalset: evalsets/resumemaster.jsonl
+          target: evals_targets.resumemaster:suggest
+          baseline: evalsets/resumemaster.baseline.json
+          max-drop: "0.02"
+          extras: judge
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
