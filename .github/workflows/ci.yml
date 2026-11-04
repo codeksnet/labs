@@ -21,7 +21,7 @@ jobs:
         with: { node-version: 22, cache: pnpm }
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
-      - run: pnpm lint
+      - run: pnpm typecheck
   eval-gate:
     # Skipped until the first eval set exists; then fails PRs whose pass rate drops vs. the
     # baseline committed on main. Convention: evalsets/<name>.jsonl, <name>.baseline.json,

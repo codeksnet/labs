@@ -6,7 +6,7 @@ Live at **[labs.codeks.net](https://labs.codeks.net)** · Blog at [codeks.net/bl
 
 | Demo | App | Stack | Status |
 |---|---|---|---|
-| Eval harness dashboard | `apps/evals-dashboard` | Next.js, Supabase, Langfuse | Planned (Nov 9–15) |
+| Eval harness dashboard | `apps/evals-dashboard` | Next.js, Supabase, Langfuse | In progress (runs list + drilldown scaffolded) |
 | Tenant isolation | `apps/tenants` | Next.js, Supabase RLS, pgvector, pytest | Planned (Nov 16–22) |
 | Events on AWS | `apps/events` | Pulumi (TS), Lambda, SQS, EventBridge, S3 | Planned (Nov 23–29) |
 | Scraper + data quality | `apps/data` | Python, Playwright, Supabase, Metabase | Planned (Nov 30–Dec 13) |
@@ -26,8 +26,11 @@ pnpm + Turborepo monorepo.
 
 ```sh
 pnpm install
-pnpm dev
+pnpm dev        # landing :3000, evals dashboard :3001
+pnpm typecheck && pnpm build
 ```
+
+Deploying: one Coolify app per directory in `apps/`, using the root `Dockerfile` with build arg `APP=<dir>`.
 
 ## Ground rules
 

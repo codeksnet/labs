@@ -2,17 +2,21 @@
   "name": "codeks-labs",
   "private": true,
   "version": "0.0.0",
-  "description": "Codeks Labs — small live demos, open source.",
+  "description": "Codeks Labs \u2014 small live demos, open source.",
   "license": "MIT",
   "packageManager": "pnpm@10.11.0",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "test": "turbo run test"
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
-    "turbo": "^2.5.0"
+    "turbo": "^2.5.0",
+    "typescript": "^5.9.0"
   }
 }

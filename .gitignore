@@ -10,3 +10,5 @@ dist/
 __pycache__/
 .venv/
 .pulumi/
+next-env.d.ts
+*.tsbuildinfo
