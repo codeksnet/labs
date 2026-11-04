@@ -9,7 +9,7 @@ Live at **[labs.codeks.net](https://labs.codeks.net)** · Blog at [codeks.net/bl
 | Eval harness dashboard | `apps/evals-dashboard` | Next.js, Supabase, Langfuse | In progress (runs list + drilldown scaffolded) |
 | Tenant isolation | `apps/tenants` | Next.js, Supabase RLS, pgvector, pytest | In progress (schema, RLS, leak test, app scaffolded) |
 | Events on AWS | `apps/events` | Pulumi (TS), Lambda, SQS, EventBridge, S3 | In progress (stack + workers tested with mocks; not yet deployed) |
-| Scraper + data quality | `apps/data` | Python, Playwright, Supabase, Metabase | Planned (Nov 30–Dec 13) |
+| Scraper + data quality | `apps/data` | Python, Playwright, Supabase, Metabase | In progress (scraper, schema, review tool tested on fixtures; not yet run live) |
 | Image generation (optional) | `apps/imagegen` | FastAPI, Fal, S3 | Planned (Dec 14–20) |
 
 The eval harness itself is a separate pip-installable package: [`codeksnet/evals`](https://github.com/codeksnet/evals). Every demo here depends on it.

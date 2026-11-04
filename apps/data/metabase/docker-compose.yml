@@ -1,0 +1,15 @@
+# Metabase on Coolify (Docker Compose resource). Metabase keeps its own app data in the H2 file on the
+# volume (fine for a demo; use Postgres for anything real). It READS the scraper data through the
+# read-only role from readonly.sql, never the service role.
+services:
+  metabase:
+    image: metabase/metabase:latest
+    restart: unless-stopped
+    environment:
+      MB_DB_FILE: /metabase-data/metabase.db
+    volumes:
+      - metabase-data:/metabase-data
+    ports:
+      - "3000"
+volumes:
+  metabase-data:
