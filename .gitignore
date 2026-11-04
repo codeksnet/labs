@@ -12,3 +12,4 @@ __pycache__/
 .pulumi/
 next-env.d.ts
 *.tsbuildinfo
+.venv-leak/

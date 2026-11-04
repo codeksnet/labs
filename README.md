@@ -7,7 +7,7 @@ Live at **[labs.codeks.net](https://labs.codeks.net)** · Blog at [codeks.net/bl
 | Demo | App | Stack | Status |
 |---|---|---|---|
 | Eval harness dashboard | `apps/evals-dashboard` | Next.js, Supabase, Langfuse | In progress (runs list + drilldown scaffolded) |
-| Tenant isolation | `apps/tenants` | Next.js, Supabase RLS, pgvector, pytest | Planned (Nov 16–22) |
+| Tenant isolation | `apps/tenants` | Next.js, Supabase RLS, pgvector, pytest | In progress (schema, RLS, leak test, app scaffolded) |
 | Events on AWS | `apps/events` | Pulumi (TS), Lambda, SQS, EventBridge, S3 | Planned (Nov 23–29) |
 | Scraper + data quality | `apps/data` | Python, Playwright, Supabase, Metabase | Planned (Nov 30–Dec 13) |
 | Image generation (optional) | `apps/imagegen` | FastAPI, Fal, S3 | Planned (Dec 14–20) |
