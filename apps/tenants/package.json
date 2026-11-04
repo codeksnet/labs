@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
-    "seed": "tsx --env-file=.env.local scripts/seed.ts",
+    "seed": "tsx --env-file=.env.local scripts/seed.mts",
     "test:leak": "bash scripts/test-leak.sh"
   },
   "dependencies": {

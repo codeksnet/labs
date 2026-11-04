@@ -25,6 +25,7 @@ docs/        plan and architecture notes
 pnpm + Turborepo monorepo.
 
 ```sh
+./scripts/week0.sh   # one-time: walks you through Supabase, Anthropic, Langfuse, PostHog, AWS and Pulumi
 pnpm install
 pnpm dev        # landing :3000, evals dashboard :3001
 pnpm typecheck && pnpm build

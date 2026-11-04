@@ -25,9 +25,12 @@ Worker logic is tested with injected dependencies; the Pulumi program is tested 
 
 ## Deploy (needs your AWS account)
 
+`scripts/week0.sh` at the repo root does the account, profile and stack setup for you. Manually:
+
 ```sh
 cd apps/events/infra
-pulumi login && pulumi stack init dev
+pulumi login && pulumi stack init demo       # stack config is git-ignored: it holds your email
+pulumi config set aws:region eu-central-1
 pulumi config set codeks-labs-events:alertEmail you@example.com   # $10 budget alarm
 pnpm up                                                           # builds handlers, then pulumi up
 pulumi stack output frontAccessKeyId; pulumi stack output frontSecretAccessKey --show-secrets

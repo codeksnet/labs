@@ -14,3 +14,7 @@ next-env.d.ts
 *.tsbuildinfo
 .venv-leak/
 .venv/
+
+# Pulumi stack config can hold personal values (alert email, AWS profile)
+apps/events/infra/Pulumi.*.yaml
+!apps/events/infra/Pulumi.yaml
