@@ -1,0 +1,4 @@
+name: codeks-labs-events
+description: EventBridge to SQS to Lambda with DLQs, S3 and DynamoDB. Part of Codeks Labs.
+runtime:
+  name: nodejs

@@ -1,0 +1,3 @@
+config:
+  aws:region: eu-central-1
+  # codeks-labs-events:alertEmail: you@example.com   # enables the $10 budget alarm
